@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWS Cloud Virtualization Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AWS Instance</h1>
+        <p>Topic: Low-cost / free VMware-style cloud virtualization </p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="networking.html">Networking</a>
+        <a href="storage.html">Storage</a>
+        <a href="security.html">Security</a>
+    </nav>
+
+    <main>
+        <section class="card">
+            <h2>Project Overview</h2>
+            <p>The project demonstrates the creation of two virtual machines, network configuration, SSH connectivity tests between the VMs, private and public IP addresses, security group configuration, 
+                Elastic IP assignment, storage expansion using EBS volumes, snapshot creation, AMI image creation, S3 storage test and creation, and Apache web server hosting.</p>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <h3>Compute</h3>
+                <p>Two Ubuntu EC2 instances were deployed named VM1 and VM2 respectively.</p>
+                <p>Both VMs were created using the AWS Free Tier on the t3.micro instance type with 8 GB storage attached to each. </p>
+                 
+            </div>
+            <div class="card">
+                <h3>Networking</h3>
+            <p> An Elastic IP (static IP) address was created and assigned VM1 to allow consistent access to the virtual machine without the IP address changing after restart. </p>
+            <p> A security group was configured to control inbound and outbound traffic. </p>
+            <p> SSH trust was also configured from VM1 to VM2 to allow for passwordless SSH authentication between the instances.</p>
+
+
+            </div>
+            <div class="card">
+                <h3>Storage</h3>
+                <p> An additional EBS volume was created and attached to the VM for extra storage. The additional disk volume was also tested to verify that files could be stored and accessed successfully.</p>
+                <p> A snapshot of the EBS volume was also created to demonstrate the difference between AWS and VMware snapshot functionality, unlike VMware where snapshots are usually taken of the whole VM, in AWS snapshots are created for individual disk volumes.</p>
+            </div>
+            <div class="card">
+                <h3>Backup / Image</h3>
+                <p> An AMI image was created from VM1 to demonstrate golden image creation within AWS, similarly to in VMware.</p>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Credits: Raoua Dridi.</p>
+    </footer>
+</body>
+</html>
