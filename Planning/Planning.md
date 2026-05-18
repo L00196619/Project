@@ -71,10 +71,10 @@ This phase will focus on analysing the results gathered from AWS, Google Cloud n
 The following areas will be evaluated:
 
 - Ease of virtual machine deployment and configuration
-- Networking and remote access functionality
+- Network configuration
 - Storage management capabilities
 - Snapshot and backup functionality
-- virtual machine cloning and template management
+- Virtual machine cloning and Golden Image creation
 - Performance and responsiveness of nested virtualization
 - Migration compatibility between Proxmox and VMware
 - Vendor lock-in considerations and exit strategy effectiveness
