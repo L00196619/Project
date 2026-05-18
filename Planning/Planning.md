@@ -18,7 +18,7 @@ The main objective of this project is to research, deploy, and evaluate cost-eff
 
 To properly test and evaluate alternatives to vmware, the project will be structrued into three core phases.
 
-### Phase 1 use native public cloud alternative
+### Phase 1 - use native public cloud alternative
 
 In this phase, AWS will be deployed and tested as a cloud-based virtualization platform.
 
