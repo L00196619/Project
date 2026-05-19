@@ -10,7 +10,7 @@
 
 **Proxmox** is not a cloud service provider itself, but is one of the leading  open-source virtualization platforms used to create and manage virtual machines. Whilst VMware uses its own dedicated VMkernel hypervisor, Proxmox is based on Debian Linux and combines both KVM virtualization and LXC container technologies within the same platform. In this project, Proxmox will be used within a cloud environment.
 
-**Google Cloud** Google Cloud is renowned for its advanced data analytics and cloud infrastructure capabilities, and in this project it will be used to compare its virtualization services against both AWS and Microsoft Azure in terms of cost, deployment, performance, and management features.
+**Google Cloud** Google Cloud is renowned for its advanced data analytics and AI/ML solutions, and in this project it will be used to compare its virtualization services against both AWS and Microsoft Azure in terms of cost, deployment, performance, and management features. Similar to AWS, Google Cloud offers free tier solution for a limited time of 90 days allowing users to test different features. This feature will be utilized in this project.
 
 ## Project planning.
 
