@@ -23,7 +23,7 @@ The aims of this practical work are:
 
 The first phase of this practical work involved deploying a virtual machine within Google Cloud, similar to the Azure deployment, Debian 12 was selected due to its compatibility with Proxmox VE.
 
-For testing purposes two virtual machines were created. The first VM was created through the Google Cloud GUI, whilst the deployement of the VM was successfull, it was not possible to identify a clear option for enabling nested virtualization during the creation process. Following deployment, the command ```egrep -c '(vmx|svm)' /proc/cpuinfo``` returned 0 indicating that virtualization extensions were not available within the VM. As nested virtualization could not be supported in this configuration, an alternative deployment method was required. A second VM was then deployed using Google Cloud Shell and gcloud commands which forced nested virtualization to be enabled explicitly during deployment. The below screenshot provides a comparaison betweem both VMs, the first VM deployed through the GUI returned a value of 0, whereas the second VM deployed through Cloud Shell returned 8, confirming that only the latter supported nested virtualization.
+For testing purposes two virtual machines were created. The first VM was created through the Google Cloud GUI, whilst the deployement of the VM was successfull, it was not possible to identify a clear option for enabling nested virtualization during the creation process. Following deployment, the command ```egrep -c '(vmx|svm)' /proc/cpuinfo``` returned 0 indicating that virtualization extensions were not available within the VM. As nested virtualization could not be supported in this configuration, a second VM was then deployed using Google Cloud Shell and gcloud commands which forced nested virtualization to be enabled explicitly during deployment. The below screenshot provides a comparaison betweem both VMs, the first VM deployed through the GUI returned a value of 0, whereas the second VM deployed through Cloud Shell returned 8, confirming that only the latter supported nested virtualization.
 
 <img src="./screenshots/GUI-vs-Shell.png">
 
@@ -112,7 +112,6 @@ This practical work showed that both Microsoft Azure and Google Cloud Platform w
 Snapshot, backup and clone testing were not repeated during this phase of the project as these features had already been examined as part of the Azure deployment and behave in the same manner regardless of the underlying cloud provider.
 
 The comparison between Azure and Google Cloud highlighted that both platforms are capable of hosting a nested Proxmox environment, however Azure's deployment was more straightforward and slightly cheaper. The migration test also confirmed that a VM could be moved successfully from the Azure Proxmox environment to the Google Cloud Proxmox environment. This shows that workloads do not necessarily have to remain with the same provider and can be transferred if requirements change in the future.
-
 
 
 ### References
