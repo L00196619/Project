@@ -21,7 +21,7 @@ The aims of this practical work are:
 
 ### Production Virtual Machine Deployment
 
-A new Ubuntu 24.04 virtual machine named ```ProdVM``` was created. During deployment, Azure Backup was enabled to allow recovery points to be created for the virtual machine.
+An Ubuntu 24.04 virtual machine named `ProdVM` was created in Azure. Azure Backup was enabled during setup and recovery points were generated automatically.
 
 Once deployed, Apache was installed and configured to host the website developed during the AWS phase of the project. Access to the website was verified using the virtual machine's public IP address.
 
@@ -99,17 +99,17 @@ Access to the recovered virtual machine was restored at 22:35. At this point SSH
 
 ### Conclusion
 
- This practical work focused on testing Azure Backup and its ability to recover a virtual machine after a complete loss event.
+This phase of the project examined the use of Azure Backup for recovering a virtual machine following a complete loss scenario.
 
- The selected recovery point was used to recreate the virtual machine. Apache was available after the recovery and the website loaded correctly. The customer, order and employee files stored within the /companydata directory were also present on the recovered system. 
+The selected recovery point was used to recreate the virtual machine. Apache was available after the recovery and the website loaded correctly. The customer, order and employee files stored within the /companydata directory were also present on the recovered system. 
  
- Some additional configuration was required after the restore. A new public IP address had to be assigned and an SSH rule was added to allow remote access to the virtual machine. A limitation was also encountered due to the Azure for Students subscription reaching its available CPU core allocation, which prevented an additional recovery VM from being created during the initial test. 
+Some additional configuration was required after the restore. A new public IP address had to be assigned and an SSH rule was added to allow remote access to the virtual machine. During the first recovery attempt, the Azure for Students subscription had reached its available CPU core limit which prevented a second recovery VM from being created.
  
-The recovery took approximately twenty minutes to complete. By the end of the process, Apache was running and the customer, order and employee records were available on the recovered virtual machine.
+Access to the recovered virtual machine was restored after approximately twenty minutes. At this point SSH connectivity was working, Apache was running and the business data files were available.
 
-Recovery points were managed through the Azure Portal and the restore operation was also performed from the same interface. No separate backup server or dedicated storage infrastructure was required.
+Recovery points, backup configuration and restore operations were all managed through the Azure Portal. No separate backup server or dedicated storage platform was required during testing.
 
-Compared to a traditional on-premises environment, the recovery process was straightforward. The backup and restore features were already available within the platform, making it possible to recover the workload without deploying additional systems.
+Compared to an on-premises environment, the recovery process was relatively straightforward. Recovery points, backup management and restore operations were all available through the Azure Portal without requiring separate backup servers or storage systems.
 
 
 
